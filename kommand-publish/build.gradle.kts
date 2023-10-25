@@ -170,7 +170,7 @@ publishing {
 //    }
 }
 
-signing {
-    isRequired = true
-    sign(publishing.publications[rootProject.name])
-}
+//signing {
+//    isRequired = true
+//    sign(publishing.publications[rootProject.name])
+//}

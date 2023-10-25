@@ -255,7 +255,7 @@ class NMSKommandArgumentSupport : KommandArgumentSupport {
         }
     }
 
-    private val enchantmentMap = Enchantment.values().map { it as CraftEnchantment }.associateBy { it.handle }
+    private val enchantmentMap = Enchantment.values().mapNotNull { it as? CraftEnchantment }.associateBy { it.handle }
 
     override fun enchantment(): KommandArgument<Enchantment> {
         return ItemEnchantmentArgument.enchantment() provide { context, name ->

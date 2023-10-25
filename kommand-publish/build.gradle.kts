@@ -59,6 +59,16 @@ publishing {
                 }
             )
         }
+
+        maven("https://repo.paring.moe/repository/maven-releases") {
+            name = "paringReleases"
+            credentials(PasswordCredentials::class)
+        }
+
+        maven("https://repo.paring.moe/repository/maven-snapshots") {
+            name = "paringSnapshots"
+            credentials(PasswordCredentials::class)
+        }
     }
 
     publications {
